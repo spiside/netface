@@ -1,0 +1,15 @@
+{
+  "name": "netface",
+  "version": "0.0.1",
+  "description": "Returns your external facing ip addresses in nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/spiside/netface.git"
+  },
+  "author": "Spiro Sideris",
+  "license": "ISC"
+}
