@@ -1,6 +1,6 @@
 var os = require('os');
 
-var module.export = function () {
+module.exports = function () {
     var interfaces = os.networkInterfaces(),
          addresses = {};
 
