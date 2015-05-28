@@ -4,18 +4,20 @@ module.exports = function () {
     var interfaces = os.networkInterfaces(),
          addresses = {};
 
-    for (var interface in interfaces) {
-        for (var i in interfaces[interface]) {
-            var netType = interfaces[interface][i];
+    for (var iface in interfaces) {
+        if (interfaces.hasOwnProperty(iface)) {
+            for (var i = 0; i < interfaces[iface].length; i++) {
+                var netType = interfaces[iface][i];
 
-            if (netType.address != undefined &&
-                netType.family == 'IPv4' &&
-                !netType.internal
-               ) {
+                if (netType.address != undefined &&
+                    netType.family == 'IPv4' &&
+                    !netType.internal
+                   ) {
 
-                addresses[interface] = netType.address;
+                    addresses[iface] = netType.address;
+                }
             }
-        };
+        }
     }
 
     return addresses;

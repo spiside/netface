@@ -1,6 +1,6 @@
 {
   "name": "netface",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "Returns your external facing ip addresses in nodejs",
   "main": "index.js",
   "scripts": {
